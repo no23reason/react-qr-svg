@@ -1,0 +1,9 @@
+coverage/
+demo/
+dist/
+docs/
+docs-resources/
+src/
+tests/
+.*
+webpack.*
