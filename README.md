@@ -1,5 +1,4 @@
 [![build status](https://secure.travis-ci.org/no23reason/react-qr-svg.svg)](http://travis-ci.org/no23reason/react-qr-svg)
-[![codecov](https://codecov.io/gh/no23reason/react-qr-svg/branch/master/graph/badge.svg)](https://codecov.io/gh/no23reason/react-qr-svg)
 [![npm version](https://img.shields.io/npm/v/react-qr-svg.svg)](https://www.npmjs.com/package/react-qr-svg)
 [![bitHound Score](https://www.bithound.io/github/no23reason/react-qr-svg/badges/score.svg)](https://www.bithound.io/github/no23reason/react-qr-svg)
 [![Dependency Status](https://david-dm.org/no23reason/react-qr-svg.svg)](https://david-dm.org/no23reason/react-qr-svg)
