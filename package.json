@@ -10,6 +10,7 @@
     "test:js": "jest --coverage",
     "test:tdd": "jest --watch",
     "test:lint": "eslint . --ext .js --ext .jsx --ignore-path .gitignore --ignore-pattern dist --ignore-pattern docs --cache",
+    "test:ts": "cd tests/typescript && rimraf out && rimraf typings && typings install && tsc && rimraf out && rimraf typings",
     "make-docs": "webpack",
     "dist": "rimraf ./dist-modules && babel ./src --out-dir ./dist-modules",
     "prepublish": "npm run dist",

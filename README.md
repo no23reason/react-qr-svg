@@ -51,7 +51,7 @@ The props available are (shown with default values):
 {
     value: '', // The value to encode in the code
     size: 256, // Size of the code in pixels
-    level: 'L', // QR ErrorLevel
+    level: 'L', // QR Error correction level
     bgColor: '#FFFFFF', // Color of the bright squares
     fgColor: '#000000', // Color of the dark squares
 }
