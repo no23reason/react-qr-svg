@@ -5,7 +5,7 @@ class Demo extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      value: '',
+      value: 'Try changing the values and see the code update in real-time!',
       size: 256,
       level: 'L',
       bgColor: '#FFFFFF',

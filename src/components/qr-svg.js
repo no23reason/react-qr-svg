@@ -9,9 +9,10 @@ export function QRCode({
     value = '',
     size = 256,
     level = 'L',
-    bgColor = '#FFF',
-    fgColor = '#000',
+    bgColor = '#FFFFFF',
+    fgColor = '#000000',
 } = {}) {
+    // adapted from https://github.com/zpao/qrcode.react/blob/master/src/index.js
     const qrcode = new QRCodeImpl(-1, ErrorCorrectLevel[level]);
     qrcode.addData(value);
     qrcode.make();
