@@ -1,19 +1,44 @@
-import React/*, {Component, PropTypes}*/ from 'react';
+import React, {PropTypes} from 'react';
 
 const QRCodeImpl = require('qr.js/lib/QRCode');
 const ErrorCorrectLevel = require('qr.js/lib/ErrorCorrectLevel');
 
-export function QRCode(props) {
-    const {value, level} = props;
+const getCellSize = (index, idealSize) => Math.ceil((index + 1) * idealSize) - Math.floor(index * idealSize);
 
+export function QRCode({
+    value = '',
+    size = 256,
+    level = 'L',
+    bgColor = '#FFF',
+    fgColor = '#000',
+} = {}) {
     const qrcode = new QRCodeImpl(-1, ErrorCorrectLevel[level]);
     qrcode.addData(value);
     qrcode.make();
 
     const cells = qrcode.modules;
-    return <svg height={300} width={300}>
+    const idealCellSize = size / cells.length;
+
+    return (<svg height={size} shapeRendering="crispEdges" width={size}>
         {
-            cells.map((row, rowIndex) => row.map((cell, colIndex) => <rect style={{ fill: cell ? '#000' : '#FFF' }} height={10} width={10} x={colIndex * 10} y={rowIndex * 10} />))
+            cells.map((row, rowIndex) =>
+                row.map((cell, colIndex) => {
+                    const cellSize = getCellSize(colIndex, idealCellSize);
+                    return (<rect height={cellSize}
+                        style={{ fill: cell ? fgColor : bgColor }}
+                        width={cellSize}
+                        x={colIndex * idealCellSize}
+                        y={rowIndex * idealCellSize}
+                    />);
+                }))
         }
-    </svg>;
+    </svg>);
 }
+
+QRCode.propTypes = {
+    value: PropTypes.string.isRequired,
+    size: PropTypes.number,
+    level: PropTypes.oneOf(['L', 'M', 'Q', 'H']),
+    bgColor: PropTypes.string,
+    fgColor: PropTypes.string,
+};
