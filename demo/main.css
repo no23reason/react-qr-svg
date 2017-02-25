@@ -7,10 +7,6 @@ body {
     line-height: 1.5;
 }
 
-form label {
-    display: block;
-}
-
 header {
     background-color: #e6e6e6;
     position: fixed;
@@ -74,11 +70,10 @@ article .description h2 {
 article .demonstration {
     font-size: larger;
     margin: 2em;
-    text-align: center;
 }
 
-article .demonstration .coordinate {
-    font-size: x-large;
+article .demonstration .qrcode {
+    text-align: center;
 }
 
 .github-fork-ribbon {
