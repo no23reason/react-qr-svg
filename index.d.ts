@@ -8,19 +8,19 @@ interface QRCodeProps {
     /**
      * Size of the code in pixels
      */
-    size: number;
+    size?: number;
     /**
      * QR Error correction level
      */
-    level: "L" | "M" | "Q" | "H";
+    level?: "L" | "M" | "Q" | "H";
     /**
      * Color of the bright squares
      */
-    bgColor: string;
+    bgColor?: string;
     /**
      * Color of the dark squares
      */
-    fgColor: string;
+    fgColor?: string;
 }
 
 /**
