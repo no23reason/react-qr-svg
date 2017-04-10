@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const QRCodeImpl = require('qr.js/lib/QRCode');
 const ErrorCorrectLevel = require('qr.js/lib/ErrorCorrectLevel');
