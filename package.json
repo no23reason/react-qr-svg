@@ -79,7 +79,9 @@
   "keywords": [
     "react",
     "reactjs",
-    "geolocation"
+    "qr-code",
+    "qr",
+    "svg"
   ],
   "license": "MIT",
   "pre-push": [
