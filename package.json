@@ -19,6 +19,7 @@
   "main": "dist-modules",
   "typings": "./index.d.ts",
   "dependencies": {
+    "prop-types": "^15.5.8",
     "qr.js": "0.0.0"
   },
   "devDependencies": {
@@ -65,7 +66,6 @@
     "webpack-merge": "^4.0.0"
   },
   "peerDependencies": {
-    "prop-types": "^15.5.6",
     "react": ">= 0.11.2 < 16.0.0"
   },
   "repository": {
