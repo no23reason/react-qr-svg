@@ -4,11 +4,9 @@ import PropTypes from 'prop-types';
 const QRCodeImpl = require('qr.js/lib/QRCode');
 const ErrorCorrectLevel = require('qr.js/lib/ErrorCorrectLevel');
 
-const getCellSize = (index, idealSize) => Math.ceil((index + 1) * idealSize) - Math.floor(index * idealSize);
-
 export function QRCode({
     value = '',
-    size = 256,
+    size,
     level = 'L',
     bgColor = '#FFFFFF',
     fgColor = '#000000',
@@ -19,20 +17,18 @@ export function QRCode({
     qrcode.make();
 
     const cells = qrcode.modules;
-    const idealCellSize = size / cells.length;
 
-    return (<svg height={size} shapeRendering="crispEdges" width={size}>
+    return (<svg shapeRendering="crispEdges" viewBox={[0, 0, cells.length, cells.length].join(' ')} width={size}>
         {
             cells.map((row, rowIndex) =>
-                row.map((cell, colIndex) => {
-                    const cellSize = getCellSize(colIndex, idealCellSize);
-                    return (<rect height={cellSize}
+                row.map((cell, colIndex) => (
+                    <rect height={1}
                         style={{ fill: cell ? fgColor : bgColor }}
-                        width={cellSize}
-                        x={colIndex * idealCellSize}
-                        y={rowIndex * idealCellSize}
-                    />);
-                }))
+                        width={1}
+                        x={colIndex}
+                        y={rowIndex}
+                    />
+                )))
         }
     </svg>);
 }
