@@ -10,6 +10,7 @@ export function QRCode({
     level = 'L',
     bgColor = '#FFFFFF',
     fgColor = '#000000',
+    ...otherProps
 } = {}) {
     // adapted from https://github.com/zpao/qrcode.react/blob/master/src/index.js
     const qrcode = new QRCodeImpl(-1, ErrorCorrectLevel[level]);
@@ -18,7 +19,7 @@ export function QRCode({
 
     const cells = qrcode.modules;
 
-    return (<svg shapeRendering="crispEdges" viewBox={[0, 0, cells.length, cells.length].join(' ')} width={size}>
+    return (<svg shapeRendering="crispEdges" viewBox={[0, 0, cells.length, cells.length].join(' ')} width={size} {...otherProps}>
         {
             cells.map((row, rowIndex) =>
                 row.map((cell, colIndex) => (

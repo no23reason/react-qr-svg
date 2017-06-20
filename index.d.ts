@@ -26,4 +26,4 @@ interface QRCodeProps {
 /**
  * The component
  */
-export function QRCode(props: QRCodeProps): React.ReactElement<{}>;
+export function QRCode(props: QRCodeProps & React.SVGProps): React.ReactElement<{}>;

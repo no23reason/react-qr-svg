@@ -35,11 +35,11 @@ import { QRCode } from 'react-qr-svg';
 class Demo extends React.Component {
     render() {
         return (<QRCode
-                    value="some text"
-                    size={512}
-                    level="Q"
                     bgColor="#FFFFFF"
                     fgColor="#000000"
+                    level="Q"
+                    style={{ width: 256 }}
+                    value="some text"
                 />);
     }
 }
@@ -58,6 +58,8 @@ The props available are (shown with default values):
 ```
 
 The `level` prop corresponds to [Error correction level](https://en.wikipedia.org/wiki/QR_code#Error_correction) so the valid values are `L`, `M`, `Q` and `H`.
+
+You can also specify all the props that are valid for the `<svg>` React element (e.g. `style`, `className` or `width` which you can use to specify the size of the QR code).
 
 ## Acknowledgements
 This project is heavily inspired by the [`qrcode.react`](https://github.com/zpao/qrcode.react) project.
