@@ -20,7 +20,7 @@ class Demo extends React.Component {
   updateFgColor = e => this.setState({ ...this.state, fgColor: e.target.value });
 
   render() {
-    const {state, updateSize, updateValue, updateLevel, updateBgColor, updateFgColor} = this;
+    const { state, updateSize, updateValue, updateLevel, updateBgColor, updateFgColor } = this;
     return (<div>
       <form className="pure-form pure-form-stacked">
         <fieldset>
@@ -53,7 +53,13 @@ class Demo extends React.Component {
         </fieldset>
       </form>
       <div className="qrcode">
-        <QRCode bgColor={state.bgColor} fgColor={state.fgColor} level={state.level} size={state.size} value={state.value} />
+        <QRCode
+          bgColor={state.bgColor}
+          fgColor={state.fgColor}
+          level={state.level}
+          style={{ width: state.size }}
+          value={state.value}
+        />
       </div>
     </div>);
   }

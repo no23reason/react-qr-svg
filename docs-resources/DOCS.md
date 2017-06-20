@@ -17,11 +17,11 @@ import { QRCode } from 'react-qr-svg';
 class Demo extends React.Component {
     render() {
         return (<QRCode
-                    value="some text"
-                    size={512}
-                    level="Q"
                     bgColor="#FFFFFF"
                     fgColor="#000000"
+                    level="Q"
+                    style={{ width: 256 }}
+                    value="some text"
                 />);
     }
 }
