@@ -6,10 +6,6 @@ interface QRCodeProps {
      */
     value: string;
     /**
-     * Size of the code in pixels
-     */
-    size?: number;
-    /**
      * QR Error correction level
      */
     level?: "L" | "M" | "Q" | "H";

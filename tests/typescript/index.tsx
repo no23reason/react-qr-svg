@@ -8,7 +8,7 @@ interface IDemoProps {
 class Demo extends React.Component<IDemoProps, {}> {
     render(): React.ReactElement<{}> {
         return <div>
-            <QRCode bgColor="#FFFFFF" fgColor="#000000" level="M" size={512} value={this.props.text} />
+            <QRCode bgColor="#FFFFFF" fgColor="#000000" level="M" value={this.props.text} />
             <QRCode value="Only value here" />
             <QRCode value="Style here" style={{ width: 250 }} />
         </div>;
