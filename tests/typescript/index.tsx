@@ -5,8 +5,8 @@ interface IDemoProps {
     text: string;
 }
 
-class Demo extends React.Component<IDemoProps, {}> {
-    render(): React.ReactElement<{}> {
+class Demo extends React.Component<IDemoProps> {
+    render(): JSX.Element {
         return <div>
             <QRCode bgColor="#FFFFFF" fgColor="#000000" level="M" value={this.props.text} />
             <QRCode value="Only value here" />
