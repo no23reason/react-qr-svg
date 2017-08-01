@@ -1,7 +1,11 @@
 {
     "compilerOptions": {
         "jsx": "react",
-        "outDir": "out"
+        "outDir": "out",
+        "typeRoots": [
+          "../../node_modules/@types/",
+          "./typings/modules/"
+        ]
     },
     "exclude": [
         "node_modules"
