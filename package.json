@@ -23,7 +23,7 @@
     "qr.js": "0.0.0"
   },
   "devDependencies": {
-    "@types/react": "^15.6.0",
+    "@types/react": "^16.0.0",
     "@types/react-dom": "^15.5.1",
     "babel-cli": "^6.10.1",
     "babel-core": "^6.10.4",
