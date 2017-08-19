@@ -1,5 +1,0 @@
-{
-  "dependencies": {
-    "react-qr-svg": "file:../../index.d.ts"
-  }
-}
