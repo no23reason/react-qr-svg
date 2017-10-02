@@ -23,6 +23,7 @@ export function QRCode({
             cells.map((row, rowIndex) =>
                 row.map((cell, colIndex) => (
                     <rect height={1}
+                        key={rowIndex * cells.length + colIndex} // string was too slow here
                         style={{ fill: cell ? fgColor : bgColor }}
                         width={1}
                         x={colIndex}
