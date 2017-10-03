@@ -52,7 +52,6 @@
     "purecss": "^1.0.0",
     "react": "~15.6.1",
     "react-dom": "~15.6.1",
-    "react-ghfork": "^0.4.0",
     "react-test-renderer": "~15.6.1",
     "rimraf": "^2.6.1",
     "semantic-release": "^8.0.3",
@@ -63,7 +62,7 @@
     "webpack-merge": "^4.0.0"
   },
   "peerDependencies": {
-    "react": ">= 0.11.2 < 16.0.0"
+    "react": ">= 0.11.2 < 17.0.0"
   },
   "repository": {
     "type": "git",
