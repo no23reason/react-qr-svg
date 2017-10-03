@@ -33,7 +33,9 @@ header .description {
     right: 0;
 }
 
-.github-fork-ribbon {
+a.github-fork-ribbon {
+    background: transparent;
+    box-shadow: none;
     position: fixed;
     letter-spacing: 0.01em;
 }
