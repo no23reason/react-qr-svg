@@ -18,11 +18,14 @@ export function QRCode({
 
     const cells = qrcode.modules;
 
+    let cellIndex = 0; // we use simple order as a key just to avoid the key warning here
+
     return (<svg shapeRendering="crispEdges" viewBox={[0, 0, cells.length, cells.length].join(' ')} {...otherProps}>
         {
             cells.map((row, rowIndex) =>
                 row.map((cell, colIndex) => (
                     <rect height={1}
+                        key={cellIndex++} // string was too slow here
                         style={{ fill: cell ? fgColor : bgColor }}
                         width={1}
                         x={colIndex}
