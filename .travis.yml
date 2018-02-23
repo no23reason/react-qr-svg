@@ -5,14 +5,12 @@ cache:
     - node_modules
 notifications:
   email: false
-node_js:
-  - '6'
-  - '7'
-  - '8'
-before_script:
-  - npm prune
-after_success:
-  - npm run semantic-release
+node_js: 8
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
+deploy:
+  provider: script
+  skip_cleanup: true
+  script:
+    - npm run semantic-release
