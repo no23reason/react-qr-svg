@@ -1,16 +1,9 @@
-[![build status](https://secure.travis-ci.org/no23reason/react-qr-svg.svg)](http://travis-ci.org/no23reason/react-qr-svg)
-[![npm version](https://img.shields.io/npm/v/react-qr-svg.svg)](https://www.npmjs.com/package/react-qr-svg)
-[![bitHound Score](https://www.bithound.io/github/no23reason/react-qr-svg/badges/score.svg)](https://www.bithound.io/github/no23reason/react-qr-svg)
-[![Dependency Status](https://david-dm.org/no23reason/react-qr-svg.svg)](https://david-dm.org/no23reason/react-qr-svg)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![Greenkeeper badge](https://badges.greenkeeper.io/no23reason/react-qr-svg.svg)](https://greenkeeper.io/)
-
+[![build status](https://secure.travis-ci.org/no23reason/react-qr-svg.svg)](http://travis-ci.org/no23reason/react-qr-svg) [![npm version](https://img.shields.io/npm/v/react-qr-svg.svg)](https://www.npmjs.com/package/react-qr-svg) [![bitHound Score](https://www.bithound.io/github/no23reason/react-qr-svg/badges/score.svg)](https://www.bithound.io/github/no23reason/react-qr-svg) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![Greenkeeper badge](https://badges.greenkeeper.io/no23reason/react-qr-svg.svg)](https://greenkeeper.io/)
 # react-qr-svg
 React component for rendering SVG QR codes
 
 ## Demo
-Basic demo can be found at the [demo page](https://no23reason.github.io/react-qr-svg/).
+Basic demo can be found at the [demo page](https://no23reason.github.io/react-qr-svg/#/demo).
 
 ## Why SVG?
 Most of the existing React components for QR (namely [`qrcode.react`](https://github.com/zpao/qrcode.react), which was used as a starting point for this project) use `<canvas>` for rendering.
