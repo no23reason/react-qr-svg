@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { QRCode } from 'react-qr-svg';
+import { QRCode } from '../..';
 
 interface IDemoProps {
     text: string;
