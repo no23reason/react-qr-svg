@@ -55,7 +55,7 @@
         "react-github-corner": "^2.1.0",
         "react-test-renderer": "^16.2.0",
         "rimraf": "^2.6.1",
-        "semantic-release": "^12.4.1",
+        "semantic-release": "^15.1.6",
         "typescript": "^2.7.2",
         "typings-tester": "^0.3.1"
     },
