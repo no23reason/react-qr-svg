@@ -29,6 +29,11 @@ export function QRCode({
             {cells.map((row, rowIndex) =>
                 row.map((cell, colIndex) => (
                     <rect
+                        className={
+                            cell
+                                ? "qr-svg-cell qr-svg-cell-filled"
+                                : "qr-svg-cell qr-svg-cell-empty"
+                        }
                         height={1}
                         key={cellIndex++} // string was too slow here
                         style={{ fill: cell ? fgColor : bgColor }}
