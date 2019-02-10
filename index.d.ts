@@ -17,6 +17,10 @@ interface QRCodeProps {
      * Color of the dark squares
      */
     fgColor?: string;
+    /**
+     * Prefix for the cell CSS classes
+     */
+    cellClassPrefix?: string;
 }
 
 /**

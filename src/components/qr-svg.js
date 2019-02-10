@@ -9,6 +9,7 @@ export function QRCode({
     level = "L",
     bgColor = "#FFFFFF",
     fgColor = "#000000",
+    cellClassPrefix = "",
     ...otherProps
 } = {}) {
     // adapted from https://github.com/zpao/qrcode.react/blob/master/src/index.js
@@ -17,6 +18,12 @@ export function QRCode({
     qrcode.make();
 
     const cells = qrcode.modules;
+
+    const cellClassName = cellClassPrefix && `${cellClassPrefix}-cell`;
+    const emptyCellClassName =
+        cellClassPrefix && `${cellClassName} ${cellClassPrefix}-cell-empty`;
+    const filledCellClassName =
+        cellClassPrefix && `${cellClassName} ${cellClassPrefix}-cell-filled`;
 
     let cellIndex = 0; // we use simple order as a key just to avoid the key warning here
 
@@ -27,16 +34,27 @@ export function QRCode({
             {...otherProps}
         >
             {cells.map((row, rowIndex) =>
-                row.map((cell, colIndex) => (
-                    <rect
-                        height={1}
-                        key={cellIndex++} // string was too slow here
-                        style={{ fill: cell ? fgColor : bgColor }}
-                        width={1}
-                        x={colIndex}
-                        y={rowIndex}
-                    />
-                )),
+                row.map((cell, colIndex) => {
+                    const className = cell
+                        ? filledCellClassName
+                        : emptyCellClassName;
+                    const classNameProp = className ? { className } : null;
+
+                    // Only use the fill if no cellClassPrefix was set. See https://github.com/no23reason/react-qr-svg/issues/136 for reasoning.
+                    const fill = !classNameProp && (cell ? fgColor : bgColor);
+                    const styleProp = fill ? { style: { fill } } : null;
+                    return (
+                        <rect
+                            height={1}
+                            key={cellIndex++} // string was too slow here
+                            {...styleProp}
+                            {...classNameProp}
+                            width={1}
+                            x={colIndex}
+                            y={rowIndex}
+                        />
+                    );
+                }),
             )}
         </svg>
     );
@@ -48,4 +66,5 @@ QRCode.propTypes = {
     level: PropTypes.oneOf(["L", "M", "Q", "H"]),
     bgColor: PropTypes.string,
     fgColor: PropTypes.string,
+    cellClassPrefix: PropTypes.string,
 };
