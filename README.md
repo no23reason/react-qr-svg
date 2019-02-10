@@ -69,9 +69,8 @@ You can use CSS to set the QR code colors instead of the `bgColor` and `fgColor`
 
 Let's say you used `my-qr-code` as the `cellClassPrefix`. The generated classes are:
 
-* `my-qr-code-cell` for all the cells
-* `my-qr-code-cell-empty` for the empty cells
-
+*   `my-qr-code-cell` for all the cells
+*   `my-qr-code-cell-empty` for the empty cells
 *   `my-qr-code-cell-filled` for the filled cells
 
 You can then set the colors using the `fill` CSS property. See [CSS Demo](https://no23reason.github.io/react-qr-svg/#/css-demo) for an example.
