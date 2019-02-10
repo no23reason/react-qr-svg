@@ -20,7 +20,12 @@ const pages = [
     {
         path: "/demo",
         title: "Demo",
-        content: pageLoader(() => import("../demo/App.jsx")),
+        content: pageLoader(() => import("../demo/Demo.jsx")),
+    },
+    {
+        path: "/css-demo",
+        title: "CSS Demo",
+        content: pageLoader(() => import("../demo/CssDemo.jsx")),
     },
 ];
 

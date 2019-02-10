@@ -17,6 +17,7 @@ class Demo extends React.Component<IDemoProps> {
                 />
                 <QRCode value="Only value here" />
                 <QRCode value="Style here" style={{ width: 250 }} />
+                <QRCode value="CSS styling" cellClassPrefix="foo" />
             </div>
         );
     }

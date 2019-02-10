@@ -1,5 +1,6 @@
 import React from "react";
-import { QRCode } from "../src/index";
+import Layout from "./Layout";
+import { QRCode } from "../src";
 
 class Demo extends React.Component {
     constructor(props, context) {
@@ -29,7 +30,7 @@ class Demo extends React.Component {
             updateFgColor,
         } = this;
         return (
-            <div>
+            <Layout>
                 <form className="pure-form pure-form-stacked">
                     <fieldset>
                         <div className="pure-g">
@@ -73,7 +74,7 @@ class Demo extends React.Component {
                         </div>
                     </fieldset>
                 </form>
-                <div className="qrcode">
+                <div style={{ textAlign: "center" }}>
                     <QRCode
                         bgColor={state.bgColor}
                         fgColor={state.fgColor}
@@ -82,7 +83,7 @@ class Demo extends React.Component {
                         value={state.value}
                     />
                 </div>
-            </div>
+            </Layout>
         );
     }
 }
