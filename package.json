@@ -44,7 +44,7 @@
         "gh-pages": "^2.0.0",
         "husky": "^4.2.3",
         "jest": "^23.6.0",
-        "prettier": "^1.11.1",
+        "prettier": "^2.0.1",
         "pretty-quick": "^2.0.0",
         "purecss": "^1.0.0",
         "react": "^16.8.6",
