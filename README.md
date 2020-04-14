@@ -55,7 +55,7 @@ The props available are (shown with default values):
     level: 'L', // QR Error correction level
     bgColor: '#FFFFFF', // Color of the bright squares
     fgColor: '#000000', // Color of the dark squares
-    cellClassPrefix: '', // Prefix of the CSS classes, if not specified, bgColor and fgColor are ignored
+    cellClassPrefix: '', // Prefix of the CSS classes, if specified, bgColor and fgColor are ignored
 }
 ```
 
