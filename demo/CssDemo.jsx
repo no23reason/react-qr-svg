@@ -20,7 +20,7 @@ const CssDemo = () => (
         <p>CSS used:</p>
         <pre>{css}</pre>
         <p>
-            Result with <code>cellClassPrefix="my-qr-code"</code>:
+            Result with <code>cellClassPrefix=&quot;my-qr-code&quot;</code>:
         </p>
         <div style={{ textAlign: "center" }}>
             <QRCode
