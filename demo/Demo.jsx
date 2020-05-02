@@ -14,12 +14,10 @@ class Demo extends React.Component {
         };
     }
 
-    updateValue = e => this.setState({ ...this.state, value: e.target.value });
-    updateLevel = e => this.setState({ ...this.state, level: e.target.value });
-    updateBgColor = e =>
-        this.setState({ ...this.state, bgColor: e.target.value });
-    updateFgColor = e =>
-        this.setState({ ...this.state, fgColor: e.target.value });
+    updateValue = (e) => this.setState({ value: e.target.value });
+    updateLevel = (e) => this.setState({ level: e.target.value });
+    updateBgColor = (e) => this.setState({ bgColor: e.target.value });
+    updateFgColor = (e) => this.setState({ fgColor: e.target.value });
 
     render() {
         const {

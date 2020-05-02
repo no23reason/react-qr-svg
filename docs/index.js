@@ -1,4 +1,4 @@
-/* eslint-disable global-require, import/no-unresolved, react/no-multi-comp */
+/* eslint-disable react/display-name, global-require, import/no-unresolved, react/no-multi-comp */
 import React from "react";
 import ReactDOM from "react-dom";
 import GithubCorner from "react-github-corner";
@@ -44,11 +44,11 @@ ReactDOM.render(
             imports={documentationImports}
             pages={pages}
             specimens={{
-                javascript: props => (
+                javascript: (props) => (
                     <CodeSpecimen {...props} lang="javascript" />
                 ),
-                js: props => <CodeSpecimen {...props} lang="javascript" />,
-                jsx: props => <ReactSpecimen {...props} />,
+                js: (props) => <CodeSpecimen {...props} lang="javascript" />,
+                jsx: (props) => <ReactSpecimen {...props} />,
             }}
             title="react-qr-svg"
         />
