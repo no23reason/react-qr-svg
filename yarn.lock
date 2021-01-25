@@ -9487,9 +9487,9 @@ punycode@^2.1.0, punycode@^2.1.1:
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
 purecss@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/purecss/-/purecss-2.0.3.tgz#ae6cd4a37b4a91658930c68098308f06d0737364"
-  integrity sha512-jK5t8Wdyh1xiskKt9Pk3psruRP7XHcHYfsBkA9tu+CGGxaC3goTyd9EFCFyYuhC7AK/68NqDfuOsP8FgQ9vHRg==
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/purecss/-/purecss-2.0.5.tgz#9b9331155ae8d96bbbf876d98bb848c6925b4e2d"
+  integrity sha512-T9yg6NwJf1fgjUs+Vo0cEhHAR7lnkYbqhNYGdKzL9KjZ0ZECvvYZ2pgvOTN3jDa+1mpouMFaskuffG+lOADwxQ==
 
 q@^1.1.2, q@^1.5.1:
   version "1.5.1"
